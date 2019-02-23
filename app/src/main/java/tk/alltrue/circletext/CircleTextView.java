@@ -32,10 +32,10 @@ public class CircleTextView extends View {
         mTextPaint.setAntiAlias(true);
         mTextPaint.setColor(Color.WHITE);
 
-        mCirclePath.addCircle(360,360, 330, Path.Direction.CW);
-
+        mCirclePath.addCircle(500,360, 330, Path.Direction.CW);
+        canvas.rotate(215,500,360);
         canvas.drawPath(mCirclePath, mPaint);
-        canvas.drawTextOnPath("Text inside a circle!", mCirclePath,0, 32, mTextPaint);
+        canvas.drawTextOnPath("Text inside a circle!", mCirclePath,32, 64, mTextPaint);
 
         setLayerType(View.LAYER_TYPE_SOFTWARE, null);
     }
